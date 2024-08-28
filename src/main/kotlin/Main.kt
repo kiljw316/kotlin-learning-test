@@ -1,7 +1,6 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
-
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    println("Enter the numbers separated by comma, then press enter.")
+    var input = readlnOrNull()
+    println("The numbers you entered are: $input")
+    println("Their sum is ${add(input)}")
 }
