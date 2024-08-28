@@ -1,5 +1,8 @@
 import io.kotest.core.spec.style.FunSpec
+import io.kotest.matchers.should
 import io.kotest.matchers.shouldBe
+import io.kotest.matchers.types.shouldBeSameInstanceAs
+import io.kotest.matchers.types.shouldBeTypeOf
 
 class FunctionsKtTest : FunSpec({
 
@@ -21,5 +24,34 @@ class FunctionsKtTest : FunSpec({
 
     test("multiply of two int") {
         multiply(1, 2) shouldBe 2
+    }
+
+    test("Input string appears twice") {
+        2 times "Bye " shouldBe "Bye Bye "
+    }
+
+    test("string infix 'to' used to create pair") {
+        val pair = "Ferrari" to "Katrina"
+
+        pair.shouldBeTypeOf<Pair<String, String>>()
+        pair.first shouldBe "Ferrari"
+        pair.second shouldBe "Katrina"
+    }
+
+    test("string infix 'onto' used to create pair") {
+        val pair = "McLaren" onto "Lucas"
+
+        pair.shouldBeTypeOf<Pair<String, String>>()
+        pair.first shouldBe "McLaren"
+        pair.second shouldBe "Lucas"
+    }
+
+    test("Person infix 'likes' used to add likedPeople") {
+        val sophia = Person("Sophia")
+        val claudia = Person("Claudia")
+
+        sophia likes claudia
+
+        sophia.likedPeople.contains(claudia) shouldBe true
     }
 })
