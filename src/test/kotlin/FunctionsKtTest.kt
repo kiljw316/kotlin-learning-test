@@ -26,7 +26,7 @@ class FunctionsKtTest : FunSpec({
         multiply(1, 2) shouldBe 2
     }
 
-    test("Input string appears twice") {
+    test("Input string appears twice with infix") {
         2 times "Bye " shouldBe "Bye Bye "
     }
 
@@ -53,5 +53,14 @@ class FunctionsKtTest : FunSpec({
         sophia likes claudia
 
         sophia.likedPeople.contains(claudia) shouldBe true
+    }
+
+    test("Input string appears twice with operator") {
+        2 * "Bye " shouldBe "Bye Bye "
+    }
+
+    test("String get operator") {
+        val str = "Always forgive your enemies; nothing annoys them so much."
+        str[0..14] shouldBe "Always forgive "
     }
 })

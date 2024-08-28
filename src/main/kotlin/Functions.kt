@@ -12,7 +12,8 @@ fun sum(x: Int, y: Int): Int {
 
 fun multiply(x: Int, y: Int) = x * y
 
-infix fun Int.times(str: String) = str.repeat(this)
+//infix fun Int.times(str: String) = str.repeat(this)
+infix operator fun Int.times(str: String) = str.repeat(this)
 
 infix fun String.onto(other: String) = Pair(this, other)
 
@@ -22,3 +23,5 @@ class Person(val name: String) {
         likedPeople.add(other)
     }
 }
+
+operator fun String.get(range: IntRange) = substring(range)
