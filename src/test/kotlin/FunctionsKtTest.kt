@@ -1,7 +1,5 @@
 import io.kotest.core.spec.style.FunSpec
-import io.kotest.matchers.should
 import io.kotest.matchers.shouldBe
-import io.kotest.matchers.types.shouldBeSameInstanceAs
 import io.kotest.matchers.types.shouldBeTypeOf
 
 class FunctionsKtTest : FunSpec({
