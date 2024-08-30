@@ -3,7 +3,7 @@ import io.kotest.matchers.shouldBe
 
 class EnumTest : FunSpec({
 
-    test("containsRed") {
+    test("call enum member function") {
         val red = Color.RED
 
         red.containsRed() shouldBe true
