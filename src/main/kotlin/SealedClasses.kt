@@ -1,7 +1,7 @@
 sealed class Mammal(val name: String)
 
 class Cat(catName: String) : Mammal(catName)
-class Human(val humanName: String, val job: String) : Mammal(humanName)
+class Human(humanName: String, val job: String) : Mammal(humanName)
 
 fun greetMammal(mammal: Mammal): String {
     return when (mammal) {
