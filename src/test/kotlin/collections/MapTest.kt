@@ -1,6 +1,10 @@
+package collections
+
+import accountReport
 import io.kotest.assertions.throwables.shouldThrowWithMessage
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
+import updatePointsCredit
 
 class MapTest : FunSpec({
     test("Map mutable, immutable") {
