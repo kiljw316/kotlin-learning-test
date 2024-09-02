@@ -6,7 +6,7 @@ import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import updatePointsCredit
 
-class MapTest : FunSpec({
+class MapCollectionTest : FunSpec({
     test("Map mutable, immutable") {
         accountReport(1) shouldBe "ID 1: credit 100"
         updatePointsCredit(1)
