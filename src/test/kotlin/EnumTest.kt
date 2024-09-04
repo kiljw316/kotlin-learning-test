@@ -17,4 +17,10 @@ class EnumTest : FunSpec({
         Color.BLUE.toString() shouldBe "BLUE"
         Color.YELLOW.toString() shouldBe "YELLOW"
     }
+
+    test("toString call in string templates") {
+        """
+            ${Color.RED}
+        """.trimIndent() shouldBe "RED"
+    }
 })
